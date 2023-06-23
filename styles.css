@@ -1,0 +1,139 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+#certificate {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 0.5s 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#header img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+#title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 0.5s 0.5s forwards;
+}
+
+#left-content {
+  text-align: left;
+}
+
+#name {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+#description {
+  font-size: 18px;
+  color: #555;
+}
+
+#date {
+  font-size: 16px;
+  color: #777;
+}
+
+#right-content {
+  text-align: left;
+}
+
+#additional-details {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+#qrcode {
+  margin-top: 20px;
+}
+
+#footer {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 0.5s 0.7s forwards;
+}
+
+#organization {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+#generateBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #certificate, #certificate * {
+    visibility: visible;
+  }
+  #certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

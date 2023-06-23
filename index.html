@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="certificate">
+    <div id="header">
+      <img src="certificate-logo.png" alt="Certificate Logo">
+      <h1 id="title">Certificate of Achievement</h1>
+    </div>
+    <div id="content">
+        <div id="left-content">
+          <h2 id="name"></h2>
+          <p id="description">In recognition of your outstanding performance</p>
+          <p id="date">June 23, 2023</p>
+        </div>
+        <div id="right-content">
+          <p id="additional-details"></p>
+          <div id="qrcode"></div>
+        </div>
+      </div>
+      
+    <div id="footer">
+      <p>This certificate is presented to</p>
+      <h3 id="organization">ABC Company</h3>
+    </div>
+  </div>
+
+  <button id="generateBtn">Generate Certificate</button>
+
+  <script src="qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
